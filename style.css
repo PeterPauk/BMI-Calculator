@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+body{
+    background-image: url(img/back.jpg);
+    background-position: center;
+    background-size: cover;
+}
+main{
+    width: 1200px;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.6)
+    
+}
+.basic{
+    display: flex;
+    justify-content: space-between;
+    
+}
+form{
+    border: 1px solid black;
+    width: 400px;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    border-radius: 15px;
+    margin: 2rem 0 0 1rem;
+    background-image: linear-gradient(153deg, rgba(151,255,255,1) 16%, rgba(195,255,255,1) 80%);
+    height: 250px;
+    box-shadow: 1px 3px 1px 1px rgb(124, 124, 134);
+    
+}
+h1{
+    margin: 0 0 1rem;
+}
+input{
+    margin-right: 20px;
+    width: 9.7rem;
+    position: relative;
+    left: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 2px;
+}
+
+#weight{
+    position: relative;
+    margin-left: 1.5px;
+}
+#age{
+    position: relative;
+    margin-left: 3.82rem;
+}
+#gender{
+    position: relative;
+    margin-left: 3.31rem;
+    margin-bottom: 0.5rem;
+}
+button{
+    width: 6rem;
+    margin: 1rem 0 2rem;
+    font-size: 1.1rem;
+    position: relative;
+    left: 7.45rem;
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #333;
+    color: white;
+}
+.basic p {
+    width: 370px;
+    border-radius: 15px;
+    margin: 2rem 1.5rem 0 0;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    
+    
+}
+.results{
+    position: relative;
+    font-size: 1.7rem;
+    border: 1px solid transparent;
+    width: 400px;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 1rem 1rem;
+    line-height: 1rem;
+    background-color: #333;
+    color: white;
+    border-radius: 15px;
+}
+.results p{
+    position: relative;
+    right: 8px;
+}
+.span1{
+    color: rgb(122, 122, 151);
+    font-weight: 900;
+}
+.span2{
+    color: rgb(70, 139, 0);
+    font-weight: 900;
+}
+.span3{
+    color: rgb(255, 234, 0);
+    font-weight: 900;
+}
+.span4{
+    color: rgb(255, 183, 0);
+    font-weight: 900;
+}
+.span5{
+    color: rgb(255, 0, 0);
+    font-weight: 900;
+}
+.test{
+    display: flex;
+    flex-direction: column;
+}
+.test p{
+    position: relative;
+    text-align: center;
+    font-size: 1.6rem;
+    border: 1px solid transparent;
+    width: 400px;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0
+}
