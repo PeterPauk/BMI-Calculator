@@ -61,7 +61,7 @@ error_reporting(E_ERROR | E_PARSE);
                 </div>
                 ';
             }
-            if($sex == 'female' ){
+            if($sex == 'female' || $sex == 'male'){
                 if($bmi <= 16){
                     echo 
                     '<div class="results">
@@ -127,12 +127,15 @@ error_reporting(E_ERROR | E_PARSE);
                 }
             }
             ?>
+            
             </div>
+            
 
             
             <?php
             if(empty($bmi)){
-                echo('<img src="img/back.jpg" alt="dwdw" id="nigga" width="200px">');
+                echo('<img src="img/empty.png" alt="dwdw" id="nigga" width="200px">');
+                
             }
             if($sex == 'female' ){
                 if($bmi <= 18.5){
@@ -151,6 +154,23 @@ error_reporting(E_ERROR | E_PARSE);
                     echo('<img src="img/f_extra.jpg" alt="dwdw" id="nigga" width="200px">');
                 }
             }
+            elseif($sex == 'male'){
+                if($bmi <= 18.5){
+                    echo('<img src="img/m_under.jpg" alt="dwdw" id="nigga" width="200px">');
+                }
+                elseif($bmi > 18.5 && $bmi <= 25){
+                    echo('<img src="img/m_normal.jpg" alt="dwdw" id="nigga" width="200px">');
+                }
+                elseif($bmi > 25 && $bmi <= 30){
+                    echo('<img src="img/m_over.jpg" alt="dwdw" id="nigga" width="200px">');
+                }
+                elseif($bmi > 30 && $bmi <= 40){
+                    echo('<img src="img/m_obese.jpg" alt="dwdw" id="nigga" width="200px">');
+                }
+                else{
+                    echo('<img src="img/m_extra.jpg" alt="dwdw" id="nigga" width="200px">');
+                }
+            }
             ?>
 
             <p>
@@ -159,10 +179,82 @@ error_reporting(E_ERROR | E_PARSE);
             The value obtained from the calculation of BMI is used to categorize whether a person is underweight, normal weight, overweight, or obese depending on what range the value falls between. 
             
             </p>
+
+            
         
         </div>
+        <img src="img/skala.png" alt="scale" id="scale"><br>
+        <style>
+            #scale{
+                position: relative;
+                bottom: 1rem;
+            }
+        </style>
+        <?php
+        if(empty($bmi)){
+            echo('<style>
+                #scale{
+                position: relative;
+                bottom: 8rem;
+                }</style>');
+        }
+        elseif($bmi <= 18.5){
+            echo('<style>
+                #scale{
+                position: relative;
+                bottom: 3rem;
+                }</style>');
+            echo('<img src="img/point.png" alt="point" id="point">');
+            echo(
+                '<style>
+                #point{
+                width: 40px;
+                position: relative;
+                bottom: 8rem;
+                left:9rem;
+                transform: rotate(-65deg);
+                transition: 0.4s;
+                }</style>
+            ');
+            
+            
+            
+        }
+        elseif($bmi > 18.5 && $bmi <= 25){
+            echo('<style>
+                #scale{
+                position: relative;
+                bottom: 7rem;
+                }</style>');
+        }
+        elseif($bmi > 25 && $bmi <= 30){
+            echo('<style>
+                #scale{
+                position: relative;
+                bottom: 3rem;
+                }</style>');
+        }
+        elseif($bmi > 30 && $bmi <= 40){
+            echo('<style>
+                #scale{
+                position: relative;
+                bottom: 5rem;
+                }</style>');
+        }
+        else{
+            echo('<style>
+                #scale{
+                position: relative;
+                bottom: 0rem;
+                }</style>');
+        }
+        
+        
+        
+            
+        
 
-       
+        ?>
         
     
 
