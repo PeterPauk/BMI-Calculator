@@ -134,41 +134,41 @@ error_reporting(E_ERROR | E_PARSE);
             
             <?php
             if(empty($bmi)){
-                echo('<img src="img/empty.png" alt="dwdw" id="nigga" width="200px">');
+                echo('<img src="img/empty.png" alt="dwdw" id="body" width="200px">');
                 
             }
             if($sex == 'female' ){
                 if($bmi <= 18.5){
-                    echo('<img src="img/f_under.jpg" alt="dwdw" id="nigga" width="200px">');
+                    echo('<img src="img/f_under.jpg" alt="dwdw" id="body" width="200px">');
                 }
                 elseif($bmi > 18.5 && $bmi <= 25){
-                    echo('<img src="img/f_normal.jpg" alt="dwdw" id="nigga" width="200px">');
+                    echo('<img src="img/f_normal.jpg" alt="dwdw" id="body" width="200px">');
                 }
                 elseif($bmi > 25 && $bmi <= 30){
-                    echo('<img src="img/f_over.jpg" alt="dwdw" id="nigga" width="200px">');
+                    echo('<img src="img/f_over.jpg" alt="dwdw" id="body" width="200px">');
                 }
                 elseif($bmi > 30 && $bmi <= 40){
-                    echo('<img src="img/f_obese.jpg" alt="dwdw" id="nigga" width="200px">');
+                    echo('<img src="img/f_obese.jpg" alt="dwdw" id="body" width="200px">');
                 }
                 else{
-                    echo('<img src="img/f_extra.jpg" alt="dwdw" id="nigga" width="200px">');
+                    echo('<img src="img/f_extra.jpg" alt="dwdw" id="body" width="200px">');
                 }
             }
             elseif($sex == 'male'){
                 if($bmi <= 18.5){
-                    echo('<img src="img/m_under.jpg" alt="dwdw" id="nigga" width="200px">');
+                    echo('<img src="img/m_under.jpg" alt="dwdw" id="body" width="200px">');
                 }
                 elseif($bmi > 18.5 && $bmi <= 25){
-                    echo('<img src="img/m_normal.jpg" alt="dwdw" id="nigga" width="200px">');
+                    echo('<img src="img/m_normal.jpg" alt="dwdw" id="body" width="200px">');
                 }
                 elseif($bmi > 25 && $bmi <= 30){
-                    echo('<img src="img/m_over.jpg" alt="dwdw" id="nigga" width="200px">');
+                    echo('<img src="img/m_over.jpg" alt="dwdw" id="body" width="200px">');
                 }
                 elseif($bmi > 30 && $bmi <= 40){
-                    echo('<img src="img/m_obese.jpg" alt="dwdw" id="nigga" width="200px">');
+                    echo('<img src="img/m_obese.jpg" alt="dwdw" id="body" width="200px">');
                 }
                 else{
-                    echo('<img src="img/m_extra.jpg" alt="dwdw" id="nigga" width="200px">');
+                    echo('<img src="img/m_extra.jpg" alt="dwdw" id="body" width="200px">');
                 }
             }
             ?>
@@ -197,8 +197,18 @@ error_reporting(E_ERROR | E_PARSE);
                 position: relative;
                 bottom: 8rem;
                 }</style>');
+                echo('<img src="img/question.png" alt="point" id="point">');
+                echo(
+                    '<style>
+                    #point{
+                    width: 40px;
+                    position: relative;
+                    bottom: 13rem;
+                    left:12rem;
+                    }</style>
+                ');  
         }
-        elseif($bmi <= 18.5){
+        elseif($bmi <= 16){
             echo('<style>
                 #scale{
                 position: relative;
@@ -215,10 +225,26 @@ error_reporting(E_ERROR | E_PARSE);
                 transform: rotate(-65deg);
                 transition: 0.4s;
                 }</style>
-            ');
-            
-            
-            
+            ');  
+        }
+        elseif($bmi > 16 && $bmi <= 18.5){
+            echo('<style>
+                #scale{
+                position: relative;
+                bottom: 3.5rem;
+                }</style>');
+            echo('<img src="img/point.png" alt="point" id="point">');
+            echo(
+                '<style>
+                #point{
+                width: 40px;
+                position: relative;
+                bottom: 10rem;
+                left:11rem;
+                transform: rotate(-50deg);
+                transition: 0.4s;
+                }</style>
+            ');  
         }
         elseif($bmi > 18.5 && $bmi <= 25){
             echo('<style>
@@ -226,13 +252,37 @@ error_reporting(E_ERROR | E_PARSE);
                 position: relative;
                 bottom: 7rem;
                 }</style>');
+                echo('<img src="img/point.png" alt="point" id="point">');
+                echo(
+                '<style>
+                #point{
+                width: 40px;
+                position: relative;
+                bottom: 13.5rem;
+                left:11rem;
+                transform: rotate(-15deg);
+                transition: 0.4s;
+                }</style>
+            ');  
         }
         elseif($bmi > 25 && $bmi <= 30){
             echo('<style>
                 #scale{
                 position: relative;
-                bottom: 3rem;
+                bottom: 4rem;
                 }</style>');
+                echo('<img src="img/point.png" alt="point" id="point">');
+                echo(
+                '<style>
+                #point{
+                width: 40px;
+                position: relative;
+                bottom: 11rem;
+                left:11rem;
+                transform: rotate(30deg);
+                transition: 0.4s;
+                }</style>
+            ');  
         }
         elseif($bmi > 30 && $bmi <= 40){
             echo('<style>
@@ -240,6 +290,18 @@ error_reporting(E_ERROR | E_PARSE);
                 position: relative;
                 bottom: 5rem;
                 }</style>');
+                echo('<img src="img/point.png" alt="point" id="point">');
+                echo(
+                    '<style>
+                    #point{
+                    width: 40px;
+                    position: relative;
+                    bottom: 12rem;
+                    left:12rem;
+                    transform: rotate(62deg);
+                    transition: 0.4s;
+                    }</style>
+                ');  
         }
         else{
             echo('<style>
@@ -247,6 +309,18 @@ error_reporting(E_ERROR | E_PARSE);
                 position: relative;
                 bottom: 0rem;
                 }</style>');
+                echo('<img src="img/point.png" alt="point" id="point">');
+                echo(
+                '<style>
+                #point{
+                width: 40px;
+                position: relative;
+                bottom: 6rem;
+                left:12rem;
+                transform: rotate(90deg);
+                transition: 0.4s;
+                }</style>
+            ');  
         }
         
         
