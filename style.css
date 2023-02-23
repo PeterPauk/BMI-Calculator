@@ -10,9 +10,10 @@ body{
 }
 main{
     width: 1200px;
-    height: 1000px;
+    height: 700px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.6)
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
     
 }
 .basic{
@@ -142,4 +143,7 @@ strong{
     margin-left: 1.6rem;
     position: relative;
     
+}
+#body{
+    margin-top: 1rem;
 }
